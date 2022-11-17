@@ -11,7 +11,7 @@ public class Cliente {
     private @Id //Clave ppal y lo genere automaticamente
     @GeneratedValue Long id;
 
-    private char tipoDni;
+    private char td;
     private Integer dni;
     private String primerNombre;
     private String segundoNombre;
@@ -24,8 +24,8 @@ public class Cliente {
 
     public Cliente() {}
 
-    public Cliente(char tipoDni, Integer dni, String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, int edad, String telefono, String direccion, String ciudadResidencia) {
-        this.tipoDni = tipoDni;
+    public Cliente(char td, Integer dni, String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, int edad, String telefono, String direccion, String ciudadResidencia) {
+        this.td = td;
         this.dni = dni;
         this.primerNombre = primerNombre;
         this.segundoNombre = segundoNombre;
@@ -45,12 +45,12 @@ public class Cliente {
         this.id = id;
     }
 
-    public char getTipoDni() {
-        return tipoDni;
+    public char getTd() {
+        return td;
     }
 
-    public void setTipoDni(char tipoDni) {
-        this.tipoDni = tipoDni;
+    public void setTd(char tipoDni) {
+        this.td = tipoDni;
     }
 
     public Integer getDni() {

@@ -110,7 +110,7 @@ class ClienteController {
                     return repositorio.save(cliente); //retorna el cliente actualizado
                 })
                 .orElseGet(() -> {
-                    newCliente.setTipoDni(td);
+                    newCliente.setTd(td);
                     newCliente.setDni(dni);
                     return repositorio.save(newCliente);
                 });
@@ -120,11 +120,9 @@ class ClienteController {
                 .created(entityModel.getRequiredLink(IanaLinkRelations.SELF).toUri())
                 .body(entityModel);
     }
-
     @DeleteMapping("/clientes/{td}/{dni}") //indica que este metodo responde a las peticiones HTTP DELETE
     ResponseEntity<?> deleteCliente(@PathVariable char td, @PathVariable Integer dni) {
-        repositorio.deleteBy2(td,dni);
-
+        repositorio.deleteByTwo(td,dni);
         return ResponseEntity.noContent().build(); //crea un mensaje de estado HTTP 204 no contenido
     }
 }

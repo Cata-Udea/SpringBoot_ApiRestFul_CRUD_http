@@ -14,7 +14,7 @@ public class CargarDatos {
     CommandLineRunner initDatabase(IRepositorioCliente repositorio) {
         return args -> {
             log.info("Precargando " + repositorio.save(new Cliente('C',23445322,"Chad", "Carlos","Perez", "Gomez",  28, "234567890", "Calle 1 #2-3", "Bogota")));
-            log.info("Precargando " + repositorio.save(new Cliente('P',1017200,"Maria", "Catalina", "Gomez", "Casas", 20, "123456789", "Calle 4 #5-6", "Medellin")));
+            log.info("Precargando " + repositorio.save(new Cliente('P',1017,"Maria", "Catalina", "Gomez", "Casas", 20, "123456789", "Calle 4 #5-6", "Medellin")));
             log.info("Precargando " + repositorio.save(new Cliente('E',12345,"Juan", "Pablo", "Gomez", "Casas", 25, "123456789", "Calle 7 #5-7", "Cali")));
             log.info("Precargando " + repositorio.save(new Cliente('C',28777,"Pedro", "Mario", "Gutierrez", "Casas", 27, "123456789", "Calle 8 #5-7", "Santander")));
         };
